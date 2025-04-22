@@ -27,4 +27,20 @@ class perishableProduct extends product {
         this.expirationDate = expirationDate;
     }
 }
+getTotalValue = (perishableProducts) => {
+    let totalValue = 0;
+    perishableProducts.forEach(product => {
+        totalValue += product.price * product.quantity;
+    });
+    return totalValue;
+} 
+toString = (perishableProducts) => {
+    let str = "Perishable Products:\n";
+    perishableProducts.forEach(product => {
+        str += `${product.name}: $${product.price} x ${product.quantity} (Expires on: ${product.expirationDate})\n`;
+    });
+    return str;
+}
+
+
 
