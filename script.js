@@ -5,3 +5,17 @@ class product {
         this.quantity = quantity;
     }
 }
+getTotalValue = (products) => {
+    let totalValue = 0;
+    products.forEach(product => {
+        totalValue += product.price * product.quantity;
+    });
+    return totalValue;
+}
+toString = (products) => {
+    let str = "Products:\n";
+    products.forEach(product => {
+        str += `${product.name}: $${product.price} x ${product.quantity}\n`;
+    });
+    return str;
+}
