@@ -110,3 +110,10 @@ console.log("Total value of store inventory before discount: $" + store.getTotal
 
 productProperties.applyDiscount(store.inventory, 0.15);
 console.log("Total value of store inventory after discount: $" + store.getTotalValue());
+
+const products= store.findProductByName("Banana");
+if (products) {
+    console.log("Product found: " + products.name + ", Price: $" + products.price + ", Quantity: " + products.quantity);
+}else {
+    console.log("Product not found");
+}
