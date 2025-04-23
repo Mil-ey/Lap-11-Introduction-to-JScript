@@ -24,7 +24,7 @@ table {
 }
 
 thead th {
-    background-color: #83b8ed;
+    background-color: #61a6eb;
     color: white;
     padding: 12px;
     text-align: left;
@@ -38,7 +38,7 @@ tbody tr {
 }
 
 tbody tr:hover {
-    background-color: #e3f2fd;
+    background-color: #6895a3;
 }
 
 td {
@@ -58,19 +58,32 @@ td {
 
 button {
     padding: 8px 14px;
-    background-color: #1976d2;
+    background-color: #51cde0;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #1565c0;
+    background-color: #2b7fe0;
 }
 
 
 #searchResults, #totalValue {
     margin-top: 15px;
     font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    color: #0c0c8e;
+    font-size: 2.5em;
+}
+h2 {
+    text-align: center;
+    color: #5244b9;
+    text-align: left;
+    
+  
 }
