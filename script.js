@@ -21,7 +21,7 @@ toString = (products) => {
     return str;
 }
 // Part two//
-class perishableProduct extends product {
+class perishableProduct extends products {
     constructor(name, price, quantity, expirationDate) {
         super(name, price, quantity);
         this.expirationDate = expirationDate;
@@ -57,12 +57,29 @@ class productProperties {
 products.forEach(product => {
     if (product instanceof perishableProduct) {
        product.price -= product.price * 0.1;
+    } else if (product instanceof product) {
+        product.price -= product.price * 0.05;
     }
 });
 
 // Part four//
-class store {
+class Store {
     constructor () {
         this.inventory = [];
+    }
+    products(products) {
+        this.inventory.push(products);
+    }
+
+    getTotalValue() {
+        let totalValue = 0;
+        this.inventory.forEach(product => {
+            totalValue += product.price * product.quantity;
+        });
+        return totalValue;
+    }
+
+    findProductByName(name) {
+        return this.inventory.find(product => product.name === name) || null;
     }
 }
