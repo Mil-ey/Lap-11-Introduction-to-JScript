@@ -1,3 +1,5 @@
+
+
 // Part one//
 class Products {
     constructor(name, price, quantity) {
@@ -80,6 +82,9 @@ class Store {
     findProductByName(name) {
         return this.inventory.find(product => product.name === name) || null;
     }
+    getInventory() {
+        return this.inventory;
+    }
 }
 
 // Part five//
@@ -109,9 +114,52 @@ console.log("Total value of store inventory before discount: $" + store.getTotal
 productProperties.applyDiscount(store.inventory, 0.15);
 console.log("Total value of store inventory after discount: $" + store.getTotalValue());
 
-const searchProducts= store.findProductByName("Banana");
-if (searchProducts) {
-    console.log("Product found: " + searchProducts.name + ", Price: $" + searchProducts.price + ", Quantity: " + searchProducts.quantity);
-}else {
-    console.log("Product not found.");
-}   
+
+function displayProducts(products) {
+    const tbody = document.getElementById("productBody");
+    tbody.innerHTML = "";
+    products.forEach((product, index) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${product.name}</td>
+            <td>$${product.price.toFixed(2)}</td>
+            <td>${product.quantity}</td>
+        `;
+        tbody.appendChild(row);
+    });
+}
+
+function displayTotalValue() {
+    const totalValue = document.getElementById("totalValue");
+    totalValue.textContent = "Total Value: $" + store.getTotalValue();
+}
+
+function searchProduct() {
+    const searchInput = document.getElementById("searchInput").value.trim();
+    const resultsDiv = document.getElementById("searchResults");
+    const found = store.findProductByName(searchInput);
+
+    if (found) {
+        resultsDiv.innerHTML = `<p>Found: ${found.name}, $${found.price.toFixed(2)}, Quantity: ${found.quantity}</p>`;
+        displayProducts([found]);
+    } else {
+        resultsDiv.innerHTML = `<p>Product not found.</p>`;
+    }
+}
+
+function showAllProducts() {
+    displayProducts(store.getInventory()); 
+    document.getElementById("searchResults").innerHTML = "";
+    document.getElementById("searchInput").value = "";
+}
+
+
+// Event listeners
+document.addEventListener("DOMContentLoaded", () => {
+    displayProducts(store.getInventory());
+    displayTotalValue();
+
+    document.getElementById("searchButton").addEventListener("click", searchProduct);
+    document.getElementById("showAllButton").addEventListener("click", showAllProducts);
+});
