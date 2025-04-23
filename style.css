@@ -1,0 +1,76 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px; 
+}
+
+thead th {
+    background-color: #83b8ed;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    border-radius: 8px 8px 0 0;
+}
+
+tbody tr {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+tbody tr:hover {
+    background-color: #e3f2fd;
+}
+
+td {
+    padding: 12px 15px;
+}
+
+
+.search-section {
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    padding: 8px;
+    width: 60%;
+    margin-right: 10px;
+}
+
+button {
+    padding: 8px 14px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1565c0;
+}
+
+
+#searchResults, #totalValue {
+    margin-top: 15px;
+    font-weight: bold;
+}
