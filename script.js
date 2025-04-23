@@ -59,3 +59,10 @@ products.forEach(product => {
        product.price -= product.price * 0.1;
     }
 });
+
+// Part four//
+class store {
+    constructor () {
+        this.inventory = [];
+    }
+}
