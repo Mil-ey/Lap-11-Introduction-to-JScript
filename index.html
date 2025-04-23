@@ -4,10 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lap Eleven</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1> Store Inventory</h1>
+        </header>
+        <div class = "Section">
+            <h2>Products</h2>
+            <table id="productTable">
+                <thead>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody id="productBody">
+                  
+                </tbody>
+            </table>
+            <div class="Section"></div>
+            <h2> Total Value</h2>
+            <p id="totalValue">Total Value: $0.00</p>
+            </div>
+        <div class="Section">
+            <h2> Products Search</h2>
+            <input type="text" id="searchInput" placeholder="Search for products...">
+            <button id="searchButton">Search</button>
+            <div id="searchResults"></div>
+        <div class="Section">
+            <h2> All Inventory</h2>
+            <button id="showAllButton">Show All Products</button>
+            <div id="allInventory"></div>
+        </div>
+        </div>
+
+            
+            
+    
     
 </body>
 </html>
