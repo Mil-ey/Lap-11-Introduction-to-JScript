@@ -1,5 +1,5 @@
 // Part one//
-class product {
+class products {
     constructor(name, price, quantity) {
         this.name = name;
         this.price = price;
@@ -54,3 +54,8 @@ class productProperties {
         });
     }
 }
+products.forEach(product => {
+    if (product instanceof perishableProduct) {
+       product.price -= product.price * 0.1;
+    }
+});
