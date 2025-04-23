@@ -41,6 +41,7 @@ toString = (perishableProducts) => {
     });
     return str;
 }
-
-
-
+const yogurt = new perishableProduct("Yogurt", 1.5, 10, "2025-10-01");
+const milk = new perishableProduct("Milk", 2.0, 5, "2025-09-15");
+const cheese = new perishableProduct("Cheese", 3.0, 2, "2025-08-20");
+const perishableProducts = [yogurt, milk, cheese];
