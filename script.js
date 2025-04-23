@@ -105,3 +105,8 @@ store.products(chocolate);
 store.products(yogurt);
 store.products(milk);
 store.products(cheese);
+
+console.log("Total value of store inventory before discount: $" + store.getTotalValue());
+
+productProperties.applyDiscount(store.inventory, 0.15);
+console.log("Total value of store inventory after discount: $" + store.getTotalValue());
