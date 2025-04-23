@@ -83,3 +83,25 @@ class Store {
         return this.inventory.find(product => product.name === name) || null;
     }
 }
+
+// Part five//
+const store = new Store();
+const apple = new products("Apple", 0.5, 20);
+const banana = new products("Banana", 0.3, 30);
+const orange = new products("Orange", 0.8, 15);
+const grapes = new products("Grapes", 2.0, 10);
+const watermelon = new products("Watermelon", 3.0, 5);
+const icecream = new perishableProduct("Ice Cream", 5.0, 8, "2025-07-01");
+const chocolate = new perishableProduct("Chocolate", 2.5, 12, "2025-06-15");
+
+
+store.products(apple);
+store.products(banana);
+store.products(orange);
+store.products(grapes);
+store.products(watermelon);
+store.products(icecream);
+store.products(chocolate);
+store.products(yogurt);
+store.products(milk);
+store.products(cheese);
